@@ -8,27 +8,28 @@
  */
 
 const HOOK_PATTERNS = [
-  'The {moment} detail in the GTA 6 trailer nobody noticed',
-  'GTA 6 just revealed {moment} and fans are losing it',
-  '{n} GTA 6 {moment} details you completely missed',
-  'This {moment} changes everything about GTA 6',
-  'Why GTA 6\'s {moment} is a bigger deal than you think',
-  'GTA 6 {moment} vs GTA 5 — it is not even close',
-  'Everyone is talking about the GTA 6 {moment}',
-  'GTA 6 confirmed {moment} and here is why it matters',
+  'The {moment} detail in the {topic} trailer nobody noticed',
+  '{topic} just revealed {moment} and fans are losing it',
+  '{n} {topic} {moment} details you completely missed',
+  'This {moment} changes everything about {topic}',
+  'Why {topic}\'s {moment} is a bigger deal than you think',
+  '{topic} {moment} vs the last one — it is not even close',
+  'Everyone is talking about the {topic} {moment}',
+  '{topic} confirmed {moment} and here is why it matters',
 ];
 const SUBTITLE_STYLE = 'Bebas Neue, bold, high-contrast, word-by-word pop, bottom-center';
-const THUMB_TEXT = ['THIS CHANGES EVERYTHING', 'VICE CITY IS BACK', 'YOU MISSED THIS', 'NO WAY', 'IT IS REAL', 'WATCH THIS'];
+const THUMB_TEXT = ['THIS CHANGES EVERYTHING', 'IT IS BACK', 'YOU MISSED THIS', 'NO WAY', 'IT IS REAL', 'WATCH THIS'];
+const tag = (t) => '#' + String(t || 'GTA 6').replace(/[^A-Za-z0-9]/g, '');
 
-function buildHook(moment, i = 0) {
-  return HOOK_PATTERNS[i % HOOK_PATTERNS.length].replace('{moment}', moment || 'new').replace('{n}', String(3 + (i % 7)));
+function buildHook(topic, moment, i = 0) {
+  return HOOK_PATTERNS[i % HOOK_PATTERNS.length].replace(/\{topic\}/g, topic || 'GTA 6').replace('{moment}', moment || 'new').replace('{n}', String(3 + (i % 7)));
 }
 function thumbnailBrief(moment, i = 0) {
   return { subject: 'GTA 6 key art / ' + (moment || 'scene') + ' frame', overlayText: THUMB_TEXT[i % THUMB_TEXT.length], style: 'dramatic lighting, high-contrast, bold overlay, Vice-City neon accents', color: 'magenta/teal high-contrast' };
 }
 
 function buildShort({ topic = 'GTA 6', moment, i = 0, scoreHook } = {}) {
-  const hook = buildHook(moment, i);
+  const hook = buildHook(topic, moment, i);
   const gate = typeof scoreHook === 'function' ? scoreHook(hook) : null;
   return {
     hook, hookVerdict: gate ? gate.verdict : null, hookScore: gate ? gate.score : null,
@@ -41,8 +42,8 @@ function buildShort({ topic = 'GTA 6', moment, i = 0, scoreHook } = {}) {
       { beat: 'cta 22-25s', line: 'Follow for a daily GTA 6 breakdown. Which one did you miss?' },
     ],
     subtitleStyle: SUBTITLE_STYLE, thumbnail: thumbnailBrief(moment, i),
-    title: (hook + ' #GTA6').slice(0, 90),
-    hashtags: ['#GTA6', '#GTA6Trailer', '#RockstarGames', '#gaming', '#shorts', '#ViceCity'],
+    title: (hook + ' ' + tag(topic)).slice(0, 90),
+    hashtags: [tag(topic), tag(topic) + 'Trailer', '#gaming', '#shorts', '#trending', '#fyp'],
   };
 }
 
