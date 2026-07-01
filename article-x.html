@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>The GTA 6 Shorts pipeline: one command, ten ready-to-shoot clips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Sometype+Mono:wght@400;600&family=Familjen+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0612; --ink:#f3e9ff; --dim:#a892c4; --line:#2a1b40;
+  --neon:#ff2e8b; --teal:#22e0d0; --card:#140b22;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Familjen Grotesk',system-ui,sans-serif;line-height:1.65;
+  background-image:radial-gradient(circle at 15% -10%,rgba(255,46,139,.14),transparent 45%),radial-gradient(circle at 90% 5%,rgba(34,224,208,.10),transparent 40%);}
+.wrap{max-width:720px;margin:0 auto;padding:48px 22px 90px}
+.kick{font-family:'Sometype Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+h1{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(38px,8vw,68px);line-height:.98;letter-spacing:.01em;margin:0 0 18px;
+  background:linear-gradient(92deg,var(--neon),#ff7ac2 55%,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:20px;color:#e7d7ff;margin:0 0 26px}
+.meta{font-family:'Sometype Mono',monospace;font-size:12px;color:var(--dim);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:0 0 34px;display:flex;gap:18px;flex-wrap:wrap}
+h2{font-family:'Anton',sans-serif;font-weight:400;font-size:26px;letter-spacing:.02em;margin:44px 0 12px;color:#fff}
+h2 .n{color:var(--neon);margin-right:10px}
+p{margin:0 0 16px}
+a{color:var(--teal)}
+strong{color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0}
+code,pre{font-family:'Sometype Mono',monospace}
+code{background:#20122f;color:var(--teal);padding:2px 7px;border-radius:6px;font-size:13px}
+pre{background:#08040f;border:1px solid var(--line);border-left:3px solid var(--neon);border-radius:10px;padding:16px 18px;overflow-x:auto;font-size:13px;color:#e7d7ff;line-height:1.5}
+ul{padding-left:20px;margin:0 0 16px}li{margin:6px 0}
+.step{display:flex;gap:14px;align-items:flex-start;margin:14px 0}
+.step .b{font-family:'Anton',sans-serif;font-size:22px;color:var(--neon);min-width:30px}
+.honest{border:1px dashed #5a4670;border-radius:14px;padding:18px 22px;margin:30px 0;background:rgba(34,224,208,.04)}
+.honest h2{margin-top:0;font-size:20px;color:var(--teal)}
+.cta{text-align:center;margin:46px 0 0}
+.cta a{display:inline-block;font-family:'Sometype Mono',monospace;font-size:14px;border:1px solid var(--teal);color:var(--teal);padding:12px 22px;border-radius:10px;text-decoration:none}
+.foot{margin-top:40px;font-size:12.5px;color:var(--dim);border-top:1px solid var(--line);padding-top:18px}
+.tag{display:inline-block;font-family:'Sometype Mono',monospace;font-size:11px;color:var(--neon);border:1px solid var(--neon);border-radius:999px;padding:3px 10px;margin:2px 4px 2px 0}
+</style>
+</head>
+<body>
+<article class="wrap">
+  <p class="kick">Faceless content // Base-adjacent // build-in-public</p>
+  <h1>The GTA 6 Shorts pipeline</h1>
+  <p class="lede">GTA 6 drops November 19. The faceless channels that win launch week are being built right now, not the week before. Here is the exact pipeline: <strong>one command turns a trailer into ten ready-to-shoot Shorts</strong>, plus the honest math on what it can and cannot do.</p>
+  <div class="meta"><span>~6 min read</span><span>open-source</span><span>bookmark it before it scrolls away</span></div>
+
+  <p>Every hype window follows the same script. A big launch is coming, search volume climbs for months, and short-form video is where the attention lands first. Most people start posting the week of launch. By then they are late. The channels that quietly built a back catalog and an audience beforehand collect the launch-week spike.</p>
+  <p>The bottleneck was never ideas. It was turning one trailer into a stack of finished, on-format clips fast enough to post daily without burning out. That is a pipeline problem. So I built the pipeline and open-sourced it.</p>
+
+  <h2><span class="n">1</span>What it does</h2>
+  <p>One command reads a topic and a trailer, and writes a complete content batch to disk:</p>
+  <div class="card">
+    <ul>
+      <li><strong>A script card per Short</strong> — hook, five script beats, subtitle style, thumbnail brief, title, hashtags.</li>
+      <li><strong>A master prompt</strong> you paste into Claude to get the voiceover scripts.</li>
+      <li><strong>A posting calendar</strong> (CSV) — one clip per day through the window.</li>
+      <li><strong>A machine-readable plan</strong> (JSON) so the rest of your tools can pick it up.</li>
+    </ul>
+    <p style="margin:0">Every hook runs through a quality gate that flags weak or slop-sounding openers before you spend a minute shooting.</p>
+  </div>
+
+  <h2><span class="n">2</span>The setup</h2>
+  <div class="step"><div class="b">1</div><div><strong>Get the engine.</strong> It is a plain Node package, no API key needed to generate the batch.<pre>npx gta6-shorts --topic "GTA 6" --count 10 --out ./batch</pre></div></div>
+  <div class="step"><div class="b">2</div><div><strong>Grab any trailer link.</strong> Each official trailer is roughly ten Shorts waiting to be clipped. Every new one they release is ten more free ideas.</div></div>
+  <div class="step"><div class="b">3</div><div><strong>Run it.</strong> You get a folder of script cards, a master prompt, and a calendar. Open the master prompt, paste it into Claude with your trailer link, and it writes the voiceovers.</div></div>
+
+  <h2><span class="n">3</span>The full loop</h2>
+  <p>The engine does the thinking part. The rest is plug-in tools you already know:</p>
+  <div class="card">
+    <ul>
+      <li><strong>Scripts + hooks + thumbnails + calendar</strong> → the pipeline (this).</li>
+      <li><strong>Voiceovers</strong> → Claude, from the master prompt (slop-filtered).</li>
+      <li><strong>Video</strong> → a generator like Higgsfield or Kling.</li>
+      <li><strong>Voice + sound</strong> → ElevenLabs. <strong>Assembly</strong> → Creatomate (9:16).</li>
+      <li><strong>Post daily</strong> through the pre-launch window, following the calendar.</li>
+    </ul>
+  </div>
+  <p>The reusable part is the point. Swap <code>--topic</code> and the same pipeline works for any hype moment, not just this one.</p>
+
+  <h2><span class="n">4</span>Why it works</h2>
+  <p>Nobody scrolls past a "you missed this detail" clip on a launch everyone is already watching. The format triggers curiosity and the algorithm rewards watch time. The pre-launch window is the highest-leverage stretch: an audience built before the game drops means your first launch-day upload lands on people immediately, and the algorithm pushes it wider.</p>
+
+  <div class="honest">
+    <h2>The honest part</h2>
+    <p>No income promises here. This is a commodity content play in a dated window. There is no moat, it gets crowded, and the moment the window closes the edge is gone. What is real: gaming AdSense RPMs are public (roughly single-digit to low-double-digit dollars per thousand views), and a back catalog compounds. What you actually earn depends on your views, your niche, and your consistency, which no tool can promise.</p>
+    <p>Use official trailers under fair-use / commentary, respect each platform's terms and copyright, and note this is a fan tool, not affiliated with Rockstar. The pipeline is the value. The judgement is yours.</p>
+  </div>
+
+  <h2><span class="n">5</span>Start today</h2>
+  <p>The window is open now. Every day you wait is a day of catalog your future audience is handing to someone faster. Run the command, generate a batch, post the first clip.</p>
+  <p style="margin-top:22px">
+    <span class="tag">#GTA6</span><span class="tag">#faceless</span><span class="tag">#AIcontentAI</span><span class="tag">#shorts</span><span class="tag">#buildinpublic</span>
+  </p>
+
+  <div class="cta"><a href="https://github.com/philpof102-svg/gta6-shorts">→ github.com/philpof102-svg/gta6-shorts (open-source)</a></div>
+
+  <p class="foot">If this was useful, a repost helps someone building before launch week. Not financial advice, not affiliated with Rockstar Games; GTA and Grand Theft Auto are trademarks of their owners, referenced here for commentary. Tools and platform terms change, verify current details yourself.</p>
+</article>
+</body>
+</html>
