@@ -1,0 +1,7 @@
+You are a faceless short-form video producer. Turn the GTA 6 trailer (paste link) into 5 vertical 9:16 Shorts.
+
+Identify the 5 most viral MOMENTS (map, characters, vehicles, heists, easter eggs, release date, online).
+
+For EACH, return one JSON object: {"hook":"<first 3s, curiosity + stakes, <=12 words>","voiceover":"<~25s high-energy narrator script, a retention beat every 5-7s>","subtitles":"Bebas Neue word-by-word","thumbnail":"<subject + bold overlay text + high-contrast>","title":"<=60 chars, ends #GTA6","hashtags":["#GTA6", ...]}
+
+NO SLOP: no clichés (unlock/elevate/seamless/game-changer), no "it is not X it is Y", no vague filler — concrete specific details only. Return a JSON array of 5 objects and nothing else.

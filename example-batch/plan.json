@@ -1,0 +1,249 @@
+{
+  "topic": "GTA 6",
+  "count": 5,
+  "launchDateMs": null,
+  "shorts": [
+    {
+      "hook": "The map detail in the GTA 6 trailer nobody noticed",
+      "hookVerdict": "revise",
+      "hookScore": 63,
+      "angle": "map",
+      "durationSec": 25,
+      "script": [
+        {
+          "beat": "hook 0-3s",
+          "line": "The map detail in the GTA 6 trailer nobody noticed"
+        },
+        {
+          "beat": "context 3-8s",
+          "line": "Cut to the map clip; set the stakes in one sentence."
+        },
+        {
+          "beat": "reveal 8-16s",
+          "line": "The specific detail + why it matters (concrete, no filler)."
+        },
+        {
+          "beat": "payoff 16-22s",
+          "line": "The \"no way\" beat / a sharp GTA 5 comparison."
+        },
+        {
+          "beat": "cta 22-25s",
+          "line": "Follow for a daily GTA 6 breakdown. Which one did you miss?"
+        }
+      ],
+      "subtitleStyle": "Bebas Neue, bold, high-contrast, word-by-word pop, bottom-center",
+      "thumbnail": {
+        "subject": "GTA 6 key art / map frame",
+        "overlayText": "THIS CHANGES EVERYTHING",
+        "style": "dramatic lighting, high-contrast, bold overlay, Vice-City neon accents",
+        "color": "magenta/teal high-contrast"
+      },
+      "title": "The map detail in the GTA 6 trailer nobody noticed #GTA6",
+      "hashtags": [
+        "#GTA6",
+        "#GTA6Trailer",
+        "#gaming",
+        "#shorts",
+        "#trending",
+        "#fyp"
+      ],
+      "day": 1,
+      "postAtMs": 1782945279042
+    },
+    {
+      "hook": "GTA 6 just revealed characters and fans are losing it",
+      "hookVerdict": "revise",
+      "hookScore": 63,
+      "angle": "characters",
+      "durationSec": 25,
+      "script": [
+        {
+          "beat": "hook 0-3s",
+          "line": "GTA 6 just revealed characters and fans are losing it"
+        },
+        {
+          "beat": "context 3-8s",
+          "line": "Cut to the characters clip; set the stakes in one sentence."
+        },
+        {
+          "beat": "reveal 8-16s",
+          "line": "The specific detail + why it matters (concrete, no filler)."
+        },
+        {
+          "beat": "payoff 16-22s",
+          "line": "The \"no way\" beat / a sharp GTA 5 comparison."
+        },
+        {
+          "beat": "cta 22-25s",
+          "line": "Follow for a daily GTA 6 breakdown. Which one did you miss?"
+        }
+      ],
+      "subtitleStyle": "Bebas Neue, bold, high-contrast, word-by-word pop, bottom-center",
+      "thumbnail": {
+        "subject": "GTA 6 key art / characters frame",
+        "overlayText": "IT IS BACK",
+        "style": "dramatic lighting, high-contrast, bold overlay, Vice-City neon accents",
+        "color": "magenta/teal high-contrast"
+      },
+      "title": "GTA 6 just revealed characters and fans are losing it #GTA6",
+      "hashtags": [
+        "#GTA6",
+        "#GTA6Trailer",
+        "#gaming",
+        "#shorts",
+        "#trending",
+        "#fyp"
+      ],
+      "day": 2,
+      "postAtMs": 1783031679042
+    },
+    {
+      "hook": "5 GTA 6 vehicles details you completely missed",
+      "hookVerdict": "revise",
+      "hookScore": 63,
+      "angle": "vehicles",
+      "durationSec": 25,
+      "script": [
+        {
+          "beat": "hook 0-3s",
+          "line": "5 GTA 6 vehicles details you completely missed"
+        },
+        {
+          "beat": "context 3-8s",
+          "line": "Cut to the vehicles clip; set the stakes in one sentence."
+        },
+        {
+          "beat": "reveal 8-16s",
+          "line": "The specific detail + why it matters (concrete, no filler)."
+        },
+        {
+          "beat": "payoff 16-22s",
+          "line": "The \"no way\" beat / a sharp GTA 5 comparison."
+        },
+        {
+          "beat": "cta 22-25s",
+          "line": "Follow for a daily GTA 6 breakdown. Which one did you miss?"
+        }
+      ],
+      "subtitleStyle": "Bebas Neue, bold, high-contrast, word-by-word pop, bottom-center",
+      "thumbnail": {
+        "subject": "GTA 6 key art / vehicles frame",
+        "overlayText": "YOU MISSED THIS",
+        "style": "dramatic lighting, high-contrast, bold overlay, Vice-City neon accents",
+        "color": "magenta/teal high-contrast"
+      },
+      "title": "5 GTA 6 vehicles details you completely missed #GTA6",
+      "hashtags": [
+        "#GTA6",
+        "#GTA6Trailer",
+        "#gaming",
+        "#shorts",
+        "#trending",
+        "#fyp"
+      ],
+      "day": 3,
+      "postAtMs": 1783118079042
+    },
+    {
+      "hook": "This heist changes everything about GTA 6",
+      "hookVerdict": "revise",
+      "hookScore": 63,
+      "angle": "heist",
+      "durationSec": 25,
+      "script": [
+        {
+          "beat": "hook 0-3s",
+          "line": "This heist changes everything about GTA 6"
+        },
+        {
+          "beat": "context 3-8s",
+          "line": "Cut to the heist clip; set the stakes in one sentence."
+        },
+        {
+          "beat": "reveal 8-16s",
+          "line": "The specific detail + why it matters (concrete, no filler)."
+        },
+        {
+          "beat": "payoff 16-22s",
+          "line": "The \"no way\" beat / a sharp GTA 5 comparison."
+        },
+        {
+          "beat": "cta 22-25s",
+          "line": "Follow for a daily GTA 6 breakdown. Which one did you miss?"
+        }
+      ],
+      "subtitleStyle": "Bebas Neue, bold, high-contrast, word-by-word pop, bottom-center",
+      "thumbnail": {
+        "subject": "GTA 6 key art / heist frame",
+        "overlayText": "NO WAY",
+        "style": "dramatic lighting, high-contrast, bold overlay, Vice-City neon accents",
+        "color": "magenta/teal high-contrast"
+      },
+      "title": "This heist changes everything about GTA 6 #GTA6",
+      "hashtags": [
+        "#GTA6",
+        "#GTA6Trailer",
+        "#gaming",
+        "#shorts",
+        "#trending",
+        "#fyp"
+      ],
+      "day": 4,
+      "postAtMs": 1783204479042
+    },
+    {
+      "hook": "Why GTA 6's easter-egg is a bigger deal than you think",
+      "hookVerdict": "revise",
+      "hookScore": 63,
+      "angle": "easter-egg",
+      "durationSec": 25,
+      "script": [
+        {
+          "beat": "hook 0-3s",
+          "line": "Why GTA 6's easter-egg is a bigger deal than you think"
+        },
+        {
+          "beat": "context 3-8s",
+          "line": "Cut to the easter-egg clip; set the stakes in one sentence."
+        },
+        {
+          "beat": "reveal 8-16s",
+          "line": "The specific detail + why it matters (concrete, no filler)."
+        },
+        {
+          "beat": "payoff 16-22s",
+          "line": "The \"no way\" beat / a sharp GTA 5 comparison."
+        },
+        {
+          "beat": "cta 22-25s",
+          "line": "Follow for a daily GTA 6 breakdown. Which one did you miss?"
+        }
+      ],
+      "subtitleStyle": "Bebas Neue, bold, high-contrast, word-by-word pop, bottom-center",
+      "thumbnail": {
+        "subject": "GTA 6 key art / easter-egg frame",
+        "overlayText": "IT IS REAL",
+        "style": "dramatic lighting, high-contrast, bold overlay, Vice-City neon accents",
+        "color": "magenta/teal high-contrast"
+      },
+      "title": "Why GTA 6's easter-egg is a bigger deal than you think #GTA6",
+      "hashtags": [
+        "#GTA6",
+        "#GTA6Trailer",
+        "#gaming",
+        "#shorts",
+        "#trending",
+        "#fyp"
+      ],
+      "day": 5,
+      "postAtMs": 1783290879042
+    }
+  ],
+  "masterPrompt": "You are a faceless short-form video producer. Turn the GTA 6 trailer (paste link) into 5 vertical 9:16 Shorts.\n\nIdentify the 5 most viral MOMENTS (map, characters, vehicles, heists, easter eggs, release date, online).\n\nFor EACH, return one JSON object: {\"hook\":\"<first 3s, curiosity + stakes, <=12 words>\",\"voiceover\":\"<~25s high-energy narrator script, a retention beat every 5-7s>\",\"subtitles\":\"Bebas Neue word-by-word\",\"thumbnail\":\"<subject + bold overlay text + high-contrast>\",\"title\":\"<=60 chars, ends #GTA6\",\"hashtags\":[\"#GTA6\", ...]}\n\nNO SLOP: no clichés (unlock/elevate/seamless/game-changer), no \"it is not X it is Y\", no vague filler — concrete specific details only. Return a JSON array of 5 objects and nothing else.",
+  "gate": {
+    "scored": 5,
+    "shippableHooks": 5,
+    "killed": 0
+  },
+  "note": "Deterministic Short scaffolds for a hype window — footage + voiceover are filled by the creator or an LLM; hooks gated by slopscore. Faceless-content play, NOT affiliated with Rockstar. Use official trailers under fair-use/commentary; respect each platform ToS + copyright."
+}
