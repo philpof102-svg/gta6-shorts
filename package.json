@@ -1,0 +1,27 @@
+{
+  "name": "gta6-shorts",
+  "version": "0.1.0",
+  "description": "Faceless Short content engine for a hype window (GTA 6). Generates hooks + script beats + thumbnail briefs + a daily posting calendar + a master LLM prompt; hooks gated by slopscore. MCP + module.",
+  "main": "shorts.js",
+  "bin": {
+    "gta6-shorts-mcp": "mcp-server.js"
+  },
+  "scripts": {
+    "test": "node shorts.js",
+    "mcp": "node mcp-server.js"
+  },
+  "keywords": [
+    "mcp",
+    "shorts",
+    "faceless",
+    "content",
+    "gta6",
+    "youtube",
+    "tiktok",
+    "ai-content"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
