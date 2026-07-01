@@ -8,7 +8,7 @@
     "gta6-shorts-mcp": "mcp-server.js"
   },
   "scripts": {
-    "test": "node shorts.js && node pipeline.js",
+    "test": "node shorts.js && node pipeline.js && node voiceover.js",
     "pipeline": "node pipeline.js",
     "mcp": "node mcp-server.js"
   },
